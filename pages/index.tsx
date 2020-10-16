@@ -8,7 +8,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 async function getPosts() {
-  const res = await fetch("http://localhost:3000/api/posts");
+  const res = await fetch(`${window.location.href}/api/posts`);
   return await res.json();
 }
 
